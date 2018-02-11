@@ -1,0 +1,46 @@
+<div class="row">
+
+    <div class="col-12">
+
+        <div class="jumbotron" > 
+            <h2 class="display-3">Records for Temperature</h2> 
+        </div>
+
+        <div class=""> 
+            <p *ngIf="recordsCount!=8">
+                <ngb-progressbar type="success" [striped]="true" [value]="((recordsCount/8)*100)">{{recordsCount}}</ngb-progressbar>
+            </p> 
+            <p *ngIf="recordsCount==8">
+                <ngb-progressbar type="danger" [striped]="true" [value]="((recordsCount/8)*100)">{{recordsCount}}</ngb-progressbar>
+            </p>
+        </div>
+
+        <form #heroForm="ngForm" (ngSubmit)="heroForm.form.valid && addRecords(heroForm)">
+            <label class="sr-only" for="inlineFormInput">Name</label>
+
+
+            <div class="row">
+                <div class="col-4"> <input min="0" placeholder="Enter the Temperature value" required #record="ngModel" name="record" type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" [(ngModel)]="temparature">
+
+                    <div *ngIf="!(record.valid) &&   heroForm.submitted " class="alert alert-danger">
+                        Please enter the valid input
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <button type="submit" class="btn btn-primary" [disabled]="recordsCount >= 8">Add</button>
+                </div>
+
+
+                <div class="col-4">
+
+                    <ng-template #popContent let-greeting="greeting">{{median}}</ng-template>
+                    <button [disabled]="recordsCount==0" type="button" class="btn btn-secondary" [ngbPopover]="popContent" triggers="mouseenter:mouseleave" popoverTitle="Median">
+                    Median </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</div>

@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="row">
+    
+        <div class="col-12 text-center">
+            <h2 class="app-name">Thought process</h2>
+        </div>
+
+        
+        <div class="col-12 text-left">
+
+        <div>
+        <h3 style="text-align:left ; padding:10px"  >This Temperature record application.I have created everything from scratch using Angular CLI </h3>
+        </div>
+                
+        <h4>User Story #1 : </h4> 
+        <p>As end user you can be able to navigate to the "Records" page and see the "Add records" form.</p>
+        <ul>
+          <li>Created a new page component Records and was linked to the nav component </li>
+          <li>The new page should include the jumbotron common component featuring the "Records for Temperaature" title.</li>
+          <li>This jumbotron is present a form with where the user can enter the values of temperature.</li>
+          <li>An Add button to add the temperature values are provided.
+          <li>The new page component are unit tested for the presence of all elements described.</li>
+        </ul>
+
+        <h4>User Story #2 : </h4>
+        <p>The input field is limited to maximum 8 temperature records</p>
+        <ul>
+          <li> recordsCount is created that adds records in an array using arrow functions.</li>
+          <li>The input value should be stored upon the Add click using addRecords Form, the form should not allow more than 8 values</li>
+          <li>Disabled the add button after reaching 8 values using arrow disabled function </li>
+        </ul>
+
+        <h4>User Story #3</h4>
+        <p>Created a progress bar to check the added records.</p>
+        <ul>
+          <li>A process bar is created using ng-bootstrap</li>
+          <li>This reflect the number of records added / maximum records and should be filled accordingly.</li>
+          <li>The color of the progress bar should be green, when 8 maximum records are hit it should become red.</li>
+          <li>New unit tests are added to the page component spec file to cover the new functionality.</li>
+        </ul>
+
+        <h4>User Story #4</h4>
+        <p> Validation is created using record.Valid.</p>
+        <ul>
+          <li>Only numerical values are allowed by specifying type as number.</li>
+          <li>A pop up created for invalid input </li>
+          <li> New unit tests are added to the page component spec file to cover the new functionality.</li>
+        </ul>
+
+        <h4>User Story #5</h4>
+        <p>Created Median</p>
+        <ul>
+          <li> "Median" button is added next to the "Add" button.</li>
+          <li>Using ngbootstrap popover the median button gives the value</li>
+          <li>recordsCount is  responsible for calculating the median.</li>
+          <li>Using disable option the median button is diabaled for no records </li>
+          <li> New unit tests  are added to the page component spec file to cover the new functionality.</li>
+        </ul>
+
+        <h2>Thankyou for checking out.</h2>
+        </div>
+        
+    </div>
+</div>

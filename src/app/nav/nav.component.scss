@@ -1,0 +1,10 @@
+// adding styles to nav component
+.nav-item.active {
+    background: orange;
+    color: white
+}
+
+.nav-item.active>a {
+    background: orange;
+    color: white
+}
